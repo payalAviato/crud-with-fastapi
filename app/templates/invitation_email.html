@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #007BFF;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+            text-align: left;
+        }
+        .content h2 {
+            color: #333333;
+        }
+        .content p {
+            color: #555555;
+            margin: 10px 0;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .button-container a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            color: #999999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>API Documentation Invitation</h1>
+        </div>
+        <div class="content">
+            <h2>Hello,</h2>
+            <p>We are excited to invite you to view our User Management API documentation on <strong>ReDoc</strong>.</p>
+            <p>You can access the documentation by clicking the button below:</p>
+            <div class="button-container">
+                <a href="http://127.0.0.1:8000/redoc" target="_blank">View API Documentation</a>
+            </div>
+            <p>As per the requirements, I changed the 'Any' method because of Flutter.</p>
+            <p>I have also set up an AWS EC2 instance for the public IP, used Reverse Proxy for port forwarding, and GCP Postgres for the database.</p>
+            <p>We appreciate your time and look forward to your feedback.</p>
+        </div>
+        <div class="footer">
+            Thank you,<br>
+            <strong>Ulrich Bachmann</strong><br>
+            If you have any questions, feel free to reply to this email.
+        </div>
+    </div>
+</body>
+</html>

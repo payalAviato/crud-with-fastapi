@@ -14,7 +14,6 @@ def send_email(subject: str, to_emails: list, html_content: str, from_email: str
         sg = SendGridAPIClient(api_key)
         response = sg.send(message)
 
-        # Check if the email was sent successfully
         if response.status_code in [200, 202]:
             return {"message": "Email sent successfully!"}
         else:

@@ -2,10 +2,8 @@ from fastapi import APIRouter, HTTPException
 from app.services.email_service import send_email
 import os
 
-# Create the APIRouter instance
 router = APIRouter()
 
-# Path to templates directory
 TEMPLATES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../templates")
 
 def load_template(template_name: str) -> str:
@@ -20,19 +18,15 @@ def load_template(template_name: str) -> str:
 async def send_invitation():
     """Send an invitation email using an HTML template."""
     try:
-        # Email details
         subject = "API Documentation Invitation"
-        to_emails = ["raviyapayal17@gmail.com"]  # Replace with recipient list or dynamic input
-        from_email = os.getenv("FROM_EMAIL")  # Fetch sender email from environment variables
-        api_key = os.getenv("SENDGRID_API_KEY")  # Fetch API key from environment variables
+        to_emails = ["raviyapayal17@gmail.com"]  
+        from_email = os.getenv("FROM_EMAIL")  
+        api_key = os.getenv("SENDGRID_API_KEY")  
 
-        # Load the template
         html_content = load_template("invitation_email.html")
 
-        # Call the email service to send the email
         response = send_email(subject, to_emails, html_content, from_email, api_key)
 
-        # Return success response
         return response
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error sending email: {str(e)}")

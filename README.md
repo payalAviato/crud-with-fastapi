@@ -26,7 +26,9 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### step 4: run project locally
+### step 4: add .env and your firebase credential in cred.json file in root
+
+### step 5: run project locally
 
 ```bash
 uvicorn app.main:app --reload

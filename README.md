@@ -33,3 +33,8 @@ pip install -r requirements.txt
 ```bash
 uvicorn app.main:app --reload
 ```
+
+### docs
+
+swagger doc: https://crud-with-fastapi.du.r.appspot.com/docs <br>
+redoc: https://crud-with-fastapi.du.r.appspot.com/redoc 
